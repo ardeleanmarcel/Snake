@@ -1,0 +1,27 @@
+canvas {
+  border: solid 5px;
+  background-color: blanchedalmond;
+}
+
+button {
+  border: 1px solid black;
+  background-color: green;
+  color: white;
+  padding: 15px;
+  cursor: pointer;
+}
+
+#message {
+  font-size: xx-large;
+  background-color: red;
+}
+
+#scoreTable {
+  font-size: larger;
+  color: orange;
+}
+
+#scoreCounter {
+  font-size: larger;
+  color: orange;
+}
