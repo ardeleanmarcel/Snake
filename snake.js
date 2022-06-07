@@ -19,7 +19,7 @@ let snakeBody = [];
 scoreTable.innerHTML = "Score: ";
 scoreCounter.innerHTML = foodCounter;
 
-generateSnake();
+generateSnakeHead();
 generateFood();
 
 addEventListener("keyup", direction);
@@ -47,7 +47,7 @@ function generateFood() {
   food.fillRect(foodX, foodY, elementSize, elementSize);
 }
 
-function generateSnake() {
+function generateSnakeHead() {
   snake.fillStyle = "green";
   snake.clearRect(snakeHeadX, snakeHeadY, elementSize, elementSize);
   snakeHeadX += directionX;
@@ -86,7 +86,7 @@ function eatFood() {
   }
 }
 
-function generateBody() {
+function generateSnakeBody() {
   for (let s = snakeBody.length - 1; s > 0; --s) {
     snake.clearRect(snakeBody[s][0], snakeBody[s][1], elementSize, elementSize);
     snakeBody[s] = snakeBody[s - 1];
@@ -100,9 +100,9 @@ function generateBody() {
 
 function gamePlay() {
   if (gameStatus) {
-    generateSnake();
+    generateSnakeHead();
     eatFood();
-    generateBody();
+    generateSnakeBody();
   }
   gameOver();
 }
